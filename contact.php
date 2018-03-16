@@ -5,8 +5,8 @@ if (isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message']) 
     $message = stripslashes(htmlentities($_POST['message'], ENT_QUOTES));
 
     // email
-    //$to = "pioneerenglishlessons@gmail.com";
-    $to = "aaron_m_cox@hotmail.co.uk";
+    $to = "pioneerenglishlessons@gmail.com";
+//    $to = "aaron_m_cox@hotmail.co.uk";
     $subject = "Pioneer English Website - Contact Form Message";
     $message = "
 Name: " . $name . ",
