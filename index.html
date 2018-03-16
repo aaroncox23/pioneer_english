@@ -23,7 +23,7 @@
     <link href='http://fonts.googleapis.com/css?family=Iceberg' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" media="all" href="css/css.css?v=1.0"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery-3.3.1.min"></script>
     <script src="js/js.js"></script>
 </head>
 <body>
@@ -68,8 +68,8 @@
         </div>
     </nav>
     <div class="row a_page" id="courses">
-        <div class="d-none d-lg-block col-2"></div>
-        <div class="col-sm-12 col-lg-4" id="white_overlay">
+        <div class="d-none d-lg-block col-1"></div>
+        <div class="col-sm-12 col-lg-5" id="white_overlay">
             <br/><br/><br/><br/>
             <h1 class="text-center page_title">Courses We Provide</h1>
             <p id="p_with_pad">The language skills you acquire during your course will help you make an impact in your
@@ -81,43 +81,56 @@
                     <a data-toggle="collapse" data-parent="#courses_accordion" href="#business" aria-expanded="false"
                        aria-controls="business" id="business_a">Business English</a>
                     <div id="business" class="collapse course_inner" role="tabpanel">
-                        <p>We offer a range of courses that will help those who want to develop their English in all
-                            aspects of business. Our teachers will help you to achieve a superior level so you can
-                            develop your Business English to an excellent standard. Your new communication skills will
-                            mean that you will be more equipped for the world of business. Make your business skills
-                            international.</p>
+                        <div class="course_text_wrap">
+                            <p>We offer a range of courses that will help those who want to develop their English in all
+                                aspects of business. Our teachers will help you to achieve a superior level so you can
+                                develop your Business English to an excellent standard. Your new communication skills
+                                will
+                                mean that you will be more equipped for the world of business. Make your business skills
+                                international.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
                     <a data-toggle="collapse" data-parent="#courses_accordion" href="#beginners" aria-expanded="false"
                        aria-controls="beginners" id="beginners_a">Beginners English</a>
                     <div id="beginners" class="collapse course_inner" role="tabpanel">
-                        <p>English is the world’s first global language and has become essential for people who wish to
-                            travel for work or leisure. English is all around us, but we know how difficult it can be if
-                            you don’t understand. That’s why we have developed a range of basic English courses for
-                            people to begin using English confidently. If you’ve never studied English before, or need
-                            to brush up on the basics, we will help you improve your speaking, listening, reading and
-                            writing.</p>
+                        <div class="course_text_wrap">
+                            <p>English is the world’s first global language and has become essential for people who wish
+                                to
+                                travel for work or leisure. English is all around us, but we know how difficult it can
+                                be if
+                                you don’t understand. That’s why we have developed a range of basic English courses for
+                                people to begin using English confidently. If you’ve never studied English before, or
+                                need
+                                to brush up on the basics, we will help you improve your speaking, listening, reading
+                                and
+                                writing.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
                     <a data-toggle="collapse" data-parent="#courses_accordion" href="#junior" aria-expanded="false"
                        aria-controls="junior" id="junior_a">Junior Classes</a>
                     <div id="junior" class="collapse course_inner" role="tabpanel">
-                        <p>Experts agree that childhood is the best time to learn another language. Our
-                            teachers are very
-                            experienced in using creative teaching methods with children of all ages and have full child
-                            protection safety certificates.</p>
+                        <div class="course_text_wrap">
+                            <p>Experts agree that childhood is the best time to learn another language. Our
+                                teachers are very
+                                experienced in using creative teaching methods with children of all ages and have full
+                                child
+                                protection safety certificates.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
                     <a data-toggle="collapse" data-parent="#courses_accordion" href="#assess" aria-expanded="false"
                        aria-controls="assess" id="assess_a">Assess Your Level</a>
                     <div id="assess" class="collapse course_inner" role="tabpanel">
-                        <p>Get your English level assessed with our online and 1-2-1 teacher tests.</p>
-                        <p>At the end of each test your level will be assessed by our professional teachers at CEFR
-                            levels.</p>
-                        <p>There are 6 levels in total, A1 to C2</p>
+                        <div class="course_text_wrap">
+                            <p>Get your English level assessed with our online and 1-2-1 teacher tests.</p>
+                            <p>At the end of each test your level will be assessed by our professional teachers at CEFR
+                                levels. There are 6 levels in total, A1 to C2.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
@@ -125,12 +138,15 @@
                        aria-expanded="false" aria-controls="qualifications" id="qualifications_a">IELTS / TOEFL / TOEIC
                         / KET / PET</a>
                     <div id="qualifications" class="collapse course_inner" role="tabpanel">
-                        <p>These scores measure the ability of non-native speakers of English to use and understand as
-                            it is spoken, written and heard in college and university settings. Most people who take
-                            this path are planning to study at colleges and universities where the course is
-                            predominantly in English. In addition to this, many government bodies, scholarship
-                            programs, and licensing/certification agencies use these scores to evaluate English
-                            proficiency.</p>
+                        <div class="course_text_wrap">
+                            <p>These scores measure the ability of non-native speakers of English to use and understand
+                                as
+                                it is spoken, written and heard in college and university settings. Most people who take
+                                this path are planning to study at colleges and universities where the course is
+                                predominantly in English. In addition to this, many government bodies, scholarship
+                                programs, and licensing/certification agencies use these scores to evaluate English
+                                proficiency.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,14 +172,14 @@
                     <li data-target="#testimonial_carousel" data-slide-to="7"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="carousel_img col-12 col-lg-2">
+                    <div class="carousel-item active align-items-center">
+                        <div class="carousel_img col-12 col-lg-4 col-xl-3 align-self-center">
                             <div class="col-3 d-lg-none"></div>
                             <img class="img-fluid col-6 col-lg-12" src="img/people/originals/processed/derya.jpg"
                                  alt="Derya Turkey"/>
                             <div class="col-3 d-lg-none"></div>
                         </div>
-                        <div class="carousel_text col-12 col-lg-6">
+                        <div class="carousel_text col-12 col-lg-6 col-xl-6 align-self-center">
                             <blockquote>The course is easy to reach and the materials are well prepared. I have found
                                 each
                                 course
@@ -184,14 +200,14 @@
                             </footer>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="carousel_img col-12 col-lg-2">
+                    <div class="carousel-item align-self-center">
+                        <div class="carousel_img col-12 col-lg-4 col-xl-3 align-self-center">
                             <div class="col-3 d-lg-none"></div>
                             <img class="img-fluid col-6 col-lg-12" src="img/people/originals/processed/francisco.jpg"
                                  alt="Francisco Carlos"/>
                             <div class="col-3 d-lg-none"></div>
                         </div>
-                        <div class="carousel_text col-12 col-lg-6">
+                        <div class="carousel_text col-12 col-lg-6 col-xl-6 align-self-center">
                             <blockquote>With Pioneer English I went from zero to a competent English speaker in
                                 amazingly little
                                 time! The teachers encouraged and helped me every step of the way. I was surprised how
@@ -207,14 +223,14 @@
                             </footer>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="carousel_img col-12 col-lg-2">
+                    <div class="carousel-item align-self-center">
+                        <div class="carousel_img col-12 col-lg-4 col-xl-3 align-self-center">
                             <div class="col-3 d-lg-none"></div>
                             <img class="img-fluid col-6 col-lg-12" src="img/people/originals/processed/guillermo.jpg"
                                  alt="Guillermo"/>
                             <div class="col-3 d-lg-none"></div>
                         </div>
-                        <div class="carousel_text col-12 col-lg-6">
+                        <div class="carousel_text col-12 col-lg-6 col-xl-6 align-self-center">
                             <blockquote>Pioneer English helped me all the way from beginner to being a professional
                                 living and
                                 working in the UK. The Business English Course is excellent and has encouraged me to
@@ -228,15 +244,15 @@
                             </footer>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="carousel_img col-12 col-lg-2">
+                    <div class="carousel-item align-self-center">
+                        <div class="carousel_img col-12 col-lg-4 col-xl-3 align-self-center">
                             <div class="col-3 d-lg-none"></div>
                             <img class="img-fluid col-6 col-lg-12" src="img/people/originals/processed/jorge_eddie.jpg"
                                  alt="Jorge and Eddie, Official Translation Team for the Central American legs of the Pro Surf
                                 Tour"/>
                             <div class="col-3 d-lg-none"></div>
                         </div>
-                        <div class="carousel_text col-12 col-lg-6">
+                        <div class="carousel_text col-12 col-lg-6 col-xl-6 align-self-center">
                             <blockquote>Pioneer English has really helped us with our degree course in Travel &
                                 Tourism.We've
                                 been
@@ -254,14 +270,14 @@
                             </footer>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="carousel_img col-12 col-lg-2">
+                    <div class="carousel-item align-self-center">
+                        <div class="carousel_img col-12 col-lg-4 col-xl-3 align-self-center">
                             <div class="col-3 d-lg-none"></div>
                             <img class="img-fluid col-6 col-lg-12" src="img/people/originals/processed/axel.jpg"
                                  alt="Axel, Greybin, Roberto, Sergio and German"/>
                             <div class="col-3 d-lg-none"></div>
                         </div>
-                        <div class="carousel_text col-12 col-lg-6">
+                        <div class="carousel_text col-12 col-lg-6 col-xl-6 align-self-center">
                             <blockquote>With Pioneer English we learned absolutely everything we needed to know; the
                                 precise
                                 terminology for sports studies, the vocabulary for the physiology of muscle groups,
@@ -276,14 +292,14 @@
                             </footer>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="carousel_img col-12 col-lg-2">
+                    <div class="carousel-item align-self-center">
+                        <div class="carousel_img col-12 col-lg-4 col-xl-3 align-self-center">
                             <div class="col-3 d-lg-none"></div>
                             <img class="img-fluid col-6 col-lg-12" src="img/people/originals/processed/yenetsys.jpg"
                                  alt="Yenetsys"/>
                             <div class="col-3 d-lg-none"></div>
                         </div>
-                        <div class="carousel_text col-12 col-lg-6">
+                        <div class="carousel_text col-12 col-lg-6 col-xl-6 align-self-center">
                             <blockquote>Taking a course with Pioneer English has made a huge difference to my life. I
                                 can now
                                 communicate easily and freely in English. The teacher's are professional and so
@@ -296,14 +312,14 @@
                             </footer>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="carousel_img col-12 col-lg-2">
+                    <div class="carousel-item align-self-center">
+                        <div class="carousel_img col-12 col-lg-4 col-xl-3 align-self-center">
                             <div class="col-3 d-lg-none"></div>
                             <img class="img-fluid col-6 col-lg-12" src="img/people/originals/processed/david.jpg"
                                  alt="Arnelys and David"/>
                             <div class="col-3 d-lg-none"></div>
                         </div>
-                        <div class="carousel_text col-12 col-lg-6">
+                        <div class="carousel_text col-12 col-lg-6 col-xl-6 align-self-center">
                             <blockquote>With Pioneer English we improved in our depth of knowledge and confidence in the
                                 English
                                 language. We can both communicate freely and assertively in English.
@@ -315,14 +331,14 @@
                             </footer>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="carousel_img col-12 col-lg-2">
+                    <div class="carousel-item align-self-center">
+                        <div class="carousel_img col-12 col-lg-4 col-xl-3 align-self-center">
                             <div class="col-3 d-lg-none"></div>
                             <img class="img-fluid col-6 col-lg-12" src="img/people/originals/processed/marta.jpg"
                                  alt="Marta"/>
                             <div class="col-3 d-lg-none"></div>
                         </div>
-                        <div class="carousel_text col-12 col-lg-6">
+                        <div class="carousel_text col-12 col-lg-6 col-xl-6 align-self-center">
                             <blockquote>Pioneer English helped me so much with my public speaking in English. I went
                                 from not
                                 being
@@ -357,14 +373,13 @@
         </div>
         <div class="col-12" id="form_wrapper">
             <form id="form" class="topBefore">
-                <input id="name" type="text" placeholder="NAME">
-                <input id="email" type="text" placeholder="E-MAIL">
+                <input id="name" type="text" placeholder="NAME" />
+                <input id="email" type="text" placeholder="E-MAIL" />
                 <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
-                <input id="submit" type="submit" value="SEND">
+                <input id="submit" value="SEND" />
             </form>
         </div>
     </div>
-
 </div>
 </body>
 </html>
