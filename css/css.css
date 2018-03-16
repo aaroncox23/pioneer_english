@@ -247,7 +247,7 @@ a:active, a:focus {
 }
 
 .course_inner {
-
+    text-align: justify;
 }
 
 .course_inner p, .course_inner h1, .course_inner h2, .course_inner h3 {
@@ -272,29 +272,34 @@ a:active, a:focus {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-#testimonials_header {
-    padding: 1em;
-    margin: auto;
-}
-
 @media (max-width: 991px) {
+    #testimonials_header {
+        padding: 1em;
+        margin: auto auto -3em auto;
+    }
+
     #testimonials_header h1 {
         font-weight: 600;
         font-size: 2.5em;
         text-align: center;
         letter-spacing: 2px;
-        line-height: 2.5em;
+        line-height: 1.5em;
         width: 100%;
-        margin-top: 1em;
+        margin-top: 1.75em;
     }
 
     #testimonials_header h3 {
-        font-size: 1.25em;
+        font-size: 1.1em;
         width: 100%;
     }
 }
 
 @media (min-width: 992px) {
+    #testimonials_header {
+        padding: 1em;
+        margin: auto;
+    }
+
     #testimonials_header h1 {
         font-weight: 600;
         font-size: 3em;
@@ -315,6 +320,7 @@ a:active, a:focus {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1em;
     z-index: 2;
 }
 
@@ -363,29 +369,30 @@ a:active, a:focus {
 
 @media (max-width: 991px) {
     .carousel_img {
-        width: 60%;
+        /*width: 60%;*/
         vertical-align: top;
         margin-top: 3em;
     }
 
     .carousel_text {
-        width: 100%;
+        /*width: 100%;*/
+        min-height: 375px;
         display: inline-block;
         text-align: left;
-        margin-top: 3em;
+        font-size: 0.75em;
     }
 }
 
 @media (min-width: 992px) {
     .carousel_img {
-        width: 15%;
+        /*width: 15%;*/
         display: inline-block;
         vertical-align: top;
         margin-top: 3em;
     }
 
     .carousel_text {
-        width: 60%;
+        /*width: 60%;*/
         display: inline-block;
         text-align: left;
         margin-top: 3em;
@@ -439,6 +446,7 @@ blockquote {
     position: relative;
     margin: 1em;
     padding: 1.5em 2em 0.5em 3em;
+    text-align: justify;
 }
 
 blockquote:before {
@@ -461,51 +469,12 @@ blockquote:after {
 }
 
 footer {
-    padding: 0 2em 0 0;
+    padding: 1em 2em 0 0;
     text-align: right;
 }
 
 cite:before {
     content: "\2013";
-}
-
-/* Filler 1 */
-#filler_1 {
-    position: relative;
-    /*background-color: #FF7600;*/
-    background: #FF7600; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FF7600, #fc4a1a); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FF7600, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.filler_1_spacer {
-    background-color: #FFFFFF;
-    height: 0.5vh;
-}
-
-#filler_1_inner {
-    /*height:40vh;*/
-    color: #FFFFFF;
-    text-align: center;
-    background: #FF7600; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FF7600, #fc4a1a); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FF7600, #fc4a1a);
-}
-
-#filler_1 h1 {
-    font-weight: 600;
-    font-size: 4em;
-    text-align: center;
-    letter-spacing: 2px;
-    line-height: 2em;
-    color: #FFFFFF;
-}
-
-#filler_1 h2 {
-    font-size: 2.25em;
-    color: #FFFFFF;
-    text-align: center;
-    margin-bottom: 2em;
 }
 
 /* Contact */
@@ -517,18 +486,81 @@ cite:before {
 #contact_cover {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-#contact h1 {
-    font-weight: 600;
-    font-size: 3em;
-    text-align: center;
-    letter-spacing: 2px;
-    line-height: 2em;
+#contact_header {
+    /*height:40vh;*/
     color: #FFFFFF;
-    margin-top: 3em;
+    text-align: center;
+    background: #FF7600; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF7600, #fc4a1a); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF7600, #fc4a1a);
+}
+
+
+@media (max-width: 991px) {
+    #contact_header h1 {
+        font-weight: 600;
+        font-size: 2em;
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 1em;
+        color: #FFFFFF;
+        margin-top: 3.5em;
+    }
+
+    #contact_header h2 {
+        font-size: 1.2em;
+        color: #FFFFFF;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    #form_wrapper {
+        margin-top: 2em;
+    }
+
+    #form {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        font-family: "Lato", sans-serif;
+        color: #FF7600;
+    }
+}
+
+@media (min-width: 992px) {
+    #contact_header h1 {
+        font-weight: 600;
+        font-size: 3em;
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 2em;
+        color: #FFFFFF;
+        margin-top: 3em;
+    }
+
+    #contact_header h2 {
+        font-size: 2.25em;
+        color: #FFFFFF;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    #form_wrapper {
+        margin-top: 4em;
+    }
+
+    #form {
+        position: relative;
+        width: 60%;
+        margin: auto;
+        font-family: "Lato", sans-serif;
+        color: #FF7600;
+    }
+
 }
 
 input::-webkit-input-placeholder,
@@ -621,18 +653,6 @@ textarea:hover::focus:-ms-placeholder {
     color: #cbc6c1;
 }
 
-#form_wrapper {
-    margin-top: 2em;
-}
-
-#form {
-    position: relative;
-    width: 60%;
-    margin: auto;
-    font-family: "Lato", sans-serif;
-    color: #FF7600;
-}
-
 input {
     font-family: "Lato", sans-serif;
     font-size: 1em;
@@ -655,7 +675,7 @@ input {
 
 textarea {
     width: 100%;
-    height: 30vh;
+    height: 150px;
     resize: none;
     padding: 15px;
 
