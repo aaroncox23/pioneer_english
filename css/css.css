@@ -41,12 +41,12 @@ body {
         vertical-align: middle;
     }
 
-    .navbar-brand img{
+    .navbar-brand img {
         vertical-align: middle;
     }
 
-    .navbar-collapse{
-        margin-top:1em;
+    .navbar-collapse {
+        margin-top: 1em;
     }
 
     .nav-item {
@@ -89,12 +89,12 @@ a:active, a:focus {
 
 /* Pages */
 
-.container-fluid{
+.container-fluid {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
 
-.row{
+.row {
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
@@ -259,7 +259,7 @@ a:active, a:focus {
     line-height: 1.5em;
 }
 
-.course_text_wrap{
+.course_text_wrap {
     /*height:180px;*/
 }
 
@@ -368,7 +368,7 @@ a:active, a:focus {
     min-height: 400px;
     /*width: 100% !important;*/
     text-align: center;
-    margin:auto;
+    margin: auto;
 }
 
 @media (max-width: 991px) {
@@ -503,7 +503,6 @@ cite:before {
     background: -webkit-linear-gradient(to right, #FF7600, #fc4a1a); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FF7600, #fc4a1a);
 }
-
 
 @media (max-width: 991px) {
     #contact_header h1 {
@@ -667,10 +666,8 @@ input {
 
     background: transparent;
     outline: none;
+    border: none;
     color: #FFFFFF;
-
-    border: solid 1px #FF7600;
-    border-bottom: none;
 
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -686,12 +683,11 @@ textarea {
 
     background: transparent;
     outline: none;
+    border: none;
 
     color: #FFFFFF;
     font-family: "Lato", sans-serif;
     font-size: 1em;
-
-    border: solid 1px #FF7600;
 
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -699,34 +695,46 @@ textarea {
     -ms-transition: all 0.3s ease-in-out;
 }
 
-#submit {
-    width: 100%;
-
-    padding: 0;
-    margin: -5px 0 0 0;
-
-    font-family: "Lato", sans-serif;
-    font-size: 1em;
+#submit_wrapper {
+    border: solid 1px #FF7600;
+    margin: 0;
     text-align: center;
-    color: #aca49c;
-
     outline: none;
     cursor: pointer;
-
-    border: solid 1px #FF7600;
-    border-top: none;
 }
 
-#submit:hover {
+#submit_wrapper:hover {
     background: #FF7600; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #FF7600, #fc4a1a); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #FF7600, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #e2dedb;
 }
 
+#submit_wrapper p {
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    font-size: 1em;
+    color: #aca49c;
+    padding-top: 1em;
+}
 
+.input_wrapper {
+    border: solid 1px #FF7600;
+    border-bottom: none;
+    margin: 0;
+}
 
+.errors {
+    display: none;
+    margin: 0;
+}
 
+.errors p {
+    text-indent: 10px;
+    margin: 0;
+    padding-bottom: 1em;
+    font-size: 0.75em;
+}
 
 
 

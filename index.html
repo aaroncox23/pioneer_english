@@ -23,7 +23,8 @@
     <link href='http://fonts.googleapis.com/css?family=Iceberg' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" media="all" href="css/css.css?v=1.0"/>
-    <script src="js/jquery-3.3.1.min"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/Ajax.js"></script>
     <script src="js/js.js"></script>
 </head>
 <body>
@@ -373,10 +374,21 @@
         </div>
         <div class="col-12" id="form_wrapper">
             <form id="form" class="topBefore">
-                <input id="name" type="text" placeholder="NAME" />
-                <input id="email" type="text" placeholder="E-MAIL" />
-                <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
-                <input id="submit" value="SEND" />
+                <div class="input_wrapper">
+                    <input id="name" type="text" placeholder="NAME" maxlength="255"/>
+                    <div class="errors" id="name_errors"></div>
+                </div>
+                <div class="input_wrapper">
+                    <input id="email" type="text" placeholder="E-MAIL" maxlength="255"/>
+                    <div class="errors" id="email_errors"></div>
+                </div>
+                <div class="input_wrapper">
+                    <textarea id="message" type="text" placeholder="MESSAGE" maxlength="500"></textarea>
+                    <div class="errors" id="message_errors"></div>
+                </div>
+                <div id="submit_wrapper">
+                    <p id="submit">SEND</p>
+                </div>
             </form>
         </div>
     </div>

@@ -1,12 +1,12 @@
 $(document).ready(function () {
-    var triangle_width = ($(window).width() / 100)*75;
+    var triangle_width = ($(window).width() / 100) * 75;
     var triangle_height = $(window).width() / 4.85;
     $(".arrow-up").css("border-left", triangle_width + "px solid transparent");
     $(".arrow-up").css("border-right", triangle_width + "px solid transparent");
     $(".arrow-up").css("border-top", triangle_height + "px solid black");
 
     $(window).on('resize', function () {
-        var triangle_width = ($(window).width() / 100)*75;
+        var triangle_width = ($(window).width() / 100) * 75;
         var triangle_height = $(window).width() / 4.85;
         $(".arrow-up").css("border-left", triangle_width + "px solid transparent");
         $(".arrow-up").css("border-right", triangle_width + "px solid transparent");
@@ -87,11 +87,111 @@ $(document).ready(function () {
                 }
             }
         });
-});
 
-$('button').click(function() {
-    $(this).toggleClass('clicked');
-    $('button p').text(function(i, text) {
-        return text === "Sent!" ? "Send" : "Sent!";
+    // Email //
+    $('#submit_wrapper').click(function () {
+        validate_email();
     });
 });
+
+function validate_email() {
+    var name = $("#name");
+    var name_errors = $("#name_errors");
+    var email = $("#email");
+    var email_errors = $("#email_errors");
+    var message = $("#message");
+    var message_errors = $("#message_errors");
+    var valid = true;
+
+    if (name.val() == "") {
+        valid = false;
+        name_errors.html("<p>*Required Field</p>");
+    } else if (name.val().length < 4) {
+        valid = false;
+        name_errors.html("<p>*Must be at least 4 characters</p>");
+    } else if (name.val().length > 255) {
+        valid = false;
+        name_errors.html("<p>*Cannot be greater than 255 characters</p>");
+    }
+    else {
+        if (name_errors.is(":visible")) {
+            name_errors.fadeOut(400, function () {
+                name_errors.css("display", "none");
+                name_errors.html("");
+            })
+        }
+        var name_input = encodeURIComponent(name.val()).replace(/[!'()*]/g, escape);
+    }
+
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.val())) {
+        if (email_errors.is(":visible")) {
+            email_errors.fadeOut(400, function () {
+                email_errors.css("display", "none");
+                email_errors.html("");
+            })
+        }
+        var email_input = encodeURIComponent(email.val()).replace(/[!'()*]/g, escape);
+    } else {
+        valid = false;
+        email_errors.html("<p>*Not a valid email address</p>");
+    }
+
+    if (message.val() == "") {
+        valid = false;
+        message_errors.html("<p>*Required Field</p>");
+    } else if (message.val().length < 4) {
+        valid = false;
+        message_errors.html("<p>*Must be at least 4 characters</p>");
+    } else if (message.val().length > 500) {
+        valid = false;
+        message_errors.html("<p>*Cannot be greater than 255 characters</p>");
+    }
+    else {
+        if (message_errors.is(":visible")) {
+            message_errors.fadeOut(400, function () {
+                message_errors.css("display", "none");
+                message_errors.html("");
+            })
+        }
+        var message_input = encodeURIComponent(message.val()).replace(/[!'()*]/g, escape);
+    }
+
+    if (valid == true) {
+        // Send //
+        var request = new Ajax().sendRequest
+        ('contact.php',
+            {
+                method: 'POST',
+                parameters: 'name=' + name_input + '&email=' + email_input + '&message=' + message_input,
+                callback: sendemailrecieved
+            }
+        );
+
+    } else {
+        // Show Errors //
+        if (name_errors.html() != "") {
+            name_errors.fadeIn(400, function () {
+                name_errors.css("display", "block");
+            })
+        }
+        if (email_errors.html() != "") {
+            email_errors.fadeIn(400, function () {
+                email_errors.css("display", "block");
+            })
+        }
+        if (message_errors.html() != "") {
+            message_errors.fadeIn(400, function () {
+                message_errors.css("display", "block");
+            })
+        }
+    }
+}
+
+function sendemailrecieved(xmlHTTP) {
+    alert(xmlHTTP.status);
+    if (xmlHTTP.status == 200) {
+
+    } else if (xmlHTTP.status == 400) {
+
+    }
+}
