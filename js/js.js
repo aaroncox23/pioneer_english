@@ -1,3 +1,14 @@
+jQuery.fn.center = function (offset) {
+    var final_offset = 0;
+    if (typeof offset != 'undefined' && offset != "") {
+        final_offset = offset;
+    }
+    this.css("position", "fixed");
+    this.css("top", ($(window).height() / 2) - (this.outerHeight() / 2) + final_offset);
+    this.css("left", ($(window).width() / 2) - (this.outerWidth() / 2));
+    return this;
+}
+
 $(document).ready(function () {
     var triangle_width = ($(window).width() / 100) * 75;
     var triangle_height = $(window).width() / 4.85;
@@ -188,10 +199,27 @@ function validate_email() {
 }
 
 function sendemailrecieved(xmlHTTP) {
-    alert(xmlHTTP.status);
+    var message = "";
     if (xmlHTTP.status == 200) {
-
-    } else if (xmlHTTP.status == 400) {
-
+        message = "<div id='success_msg'><p>Message Successfully Sent</p></div>";
+    } else if (xmlHTTP.status == 400 || xmlHTTP.status == 500 || xmlHTTP.status == 404) {
+        message = "<div id='failed_msg'><p>Something went wrong, please refresh and try again.<br />If the problem persists please contact the system admin at<br />workingdesign@hotmail.co.uk</p></div>";
     }
+    message += "<a id='exit_btn' onclick='close_msg()'><img src='img/x_24.png' width='24' height='24' alt='Exit Message' title='Exit Message' /> </a>";
+    $("body").css("overflow-y", "hidden");
+    $("#page_cover").fadeIn(400);
+    $("#msg_response").html(message).center().fadeIn(400, function(){
+        $("#page_cover").css("display", "block");
+        $("#msg_response").css("display", "block");
+    });
+
+}
+
+function close_msg(){
+    $("body").css("overflow-y", "scroll");
+    $("#page_cover").fadeOut(400);
+    $("#msg_response").fadeOut(400, function(){
+        $("#page_cover").css("display", "none");
+        $("#msg_response").css("display", "none").html("");
+    });
 }
