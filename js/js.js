@@ -174,7 +174,7 @@ function validate_email() {
             {
                 method: 'POST',
                 parameters: 'name=' + name_input + '&email=' + email_input + '&message=' + message_input,
-                callback: sendemailrecieved
+                callback: send_email_recieved
             }
         );
 
@@ -198,7 +198,7 @@ function validate_email() {
     }
 }
 
-function sendemailrecieved(xmlHTTP) {
+function send_email_recieved(xmlHTTP) {
     var message = "";
     if (xmlHTTP.status == 200) {
         message = "<div id='success_msg'><p>Message Successfully Sent</p></div>";
